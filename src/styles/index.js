@@ -24,9 +24,17 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
 // GLOBAL
 export const GlobalStyle = createGlobalStyle`
-  .main-content {
-    padding: 0 2rem;
-  }
+  ${media.phone`
+    .main-content {
+      padding: 0 2rem;
+    }
+  `}
+
+  ${media.tablet`
+    .main-content {
+      padding: 0 1rem;
+    }
+  `}
 `;
 
 export const MAIN = styled.main`
