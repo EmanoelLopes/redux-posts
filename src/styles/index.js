@@ -24,13 +24,14 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
 // GLOBAL
 export const GlobalStyle = createGlobalStyle`
- 
+  .main-content {
+    padding: 0 2rem;
+  }
 `;
 
 export const MAIN = styled.main`
   max-width: ${sizes.desktop}px;
   margin: 0 auto;
-  width: ${defaults.width}%;
 `;
 
 export const UL = styled.ul`
@@ -43,11 +44,12 @@ export const LI = styled.li`
 `;
 
 export const H1 = styled.h1`
+  font-size: calc(${defaults.fontSize}px * 2);
   margin: 0 0 10px 0;
 `;
 
-export const H2 = styled(H1)`
- font-size: calc(${defaults.fontSize}px + 2px);
+export const H2 = styled.h2`
+ font-size: calc(${defaults.fontSize}px * 1.75);
 `;
 
 export const P = styled.p`
